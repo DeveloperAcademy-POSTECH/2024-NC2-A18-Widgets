@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct DalAhDalAhApp: App {
+    @State private var vm = EclipseViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            
-            
+            EclipseView()
         }
+        .environment(vm)
     }
 }

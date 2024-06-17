@@ -1,0 +1,46 @@
+[
+    {
+        "date": "2024-09-18",
+        "startTime": "11:12:58",
+        "endTime": "12:15:38",
+        "maxTime": "11:44:18",
+        "type": "Partial Lunar Eclipse"
+    },
+    {
+        "date": "2025-03-14",
+        "startTime": "15:26:06",
+        "endTime": "16:31:26",
+        "maxTime": "15:58:43",
+        "type": "Total Lunar Eclipse"
+    },
+    {
+        "date": "2025-09-08",
+        "startTime": "02:30:48",
+        "endTime": "03:52:51",
+        "maxTime": "03:11:47",
+        "type": "Total Lunar Eclipse"
+    },
+    {
+        "date": "2026-03-03",
+        "startTime": "20:04:34",
+        "endTime": "21:02:49",
+        "maxTime": "20:33:46",
+        "type": "Total Lunar Eclipse"
+    },
+    {
+        "date": "2026-08-28",
+        "startTime": "11:33:54",
+        "endTime": "14:51:59",
+        "maxTime": "13:12:53",
+        "type": "Partial Lunar Eclipse"
+    },
+    {
+        "date": "2028-01-01",
+        "startTime": "01:16:28",
+        "endTime": "02:27:44",
+        "maxTime": "01:52:03",
+        "type": "Total Lunar Eclipse"
+    }
+
+]
+

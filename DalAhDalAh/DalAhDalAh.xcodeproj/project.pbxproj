@@ -8,17 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		AF82C6662C1F207800D6A43A /* DalAhDalAhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6652C1F207800D6A43A /* DalAhDalAhApp.swift */; };
-		AF82C6682C1F207800D6A43A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6672C1F207800D6A43A /* ContentView.swift */; };
 		AF82C66A2C1F207900D6A43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C6692C1F207900D6A43A /* Assets.xcassets */; };
 		AF82C66D2C1F207900D6A43A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C66C2C1F207900D6A43A /* Preview Assets.xcassets */; };
+		AF82C67A2C2007E400D6A43A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF82C6792C2007E400D6A43A /* WidgetKit.framework */; };
+		AF82C67C2C2007E400D6A43A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF82C67B2C2007E400D6A43A /* SwiftUI.framework */; };
+		AF82C67F2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */; };
+		AF82C6812C2007E400D6A43A /* EclipseLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */; };
+		AF82C6832C2007E400D6A43A /* DalAhDalAhWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */; };
+		AF82C6852C2007E400D6A43A /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6842C2007E400D6A43A /* AppIntent.swift */; };
+		AF82C6872C2007E500D6A43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C6862C2007E500D6A43A /* Assets.xcassets */; };
+		AF82C68B2C2007E500D6A43A /* DalAhDalAhWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF82C6922C20081D00D6A43A /* Eclipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6912C20081D00D6A43A /* Eclipse.swift */; };
+		AF82C6962C20086500D6A43A /* EclipseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6952C20086500D6A43A /* EclipseViewModel.swift */; };
+		AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */; };
+		AF82C69A2C204E5100D6A43A /* EclipseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */; };
+		AF82C69B2C204E7B00D6A43A /* EclipseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */; };
+		AF82C69D2C204E9900D6A43A /* EclipseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C69C2C204E9900D6A43A /* EclipseView.swift */; };
+		AF82C69F2C206C1D00D6A43A /* eclipses.json in Resources */ = {isa = PBXBuildFile; fileRef = AF82C69E2C206C1D00D6A43A /* eclipses.json */; };
+		AF82C6A02C206C1D00D6A43A /* eclipses.json in Resources */ = {isa = PBXBuildFile; fileRef = AF82C69E2C206C1D00D6A43A /* eclipses.json */; };
+		AF82C6A12C2074B100D6A43A /* Eclipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6912C20081D00D6A43A /* Eclipse.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF82C6892C2007E500D6A43A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF82C65A2C1F207800D6A43A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF82C6762C2007E400D6A43A;
+			remoteInfo = DalAhDalAhWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF82C68F2C2007E500D6A43A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF82C68B2C2007E500D6A43A /* DalAhDalAhWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF82C6622C1F207800D6A43A /* DalAhDalAh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DalAhDalAh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF82C6652C1F207800D6A43A /* DalAhDalAhApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalAhDalAhApp.swift; sourceTree = "<group>"; };
-		AF82C6672C1F207800D6A43A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF82C6692C1F207900D6A43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF82C66C2C1F207900D6A43A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DalAhDalAhWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF82C6792C2007E400D6A43A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AF82C67B2C2007E400D6A43A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalAhDalAhWidgetBundle.swift; sourceTree = "<group>"; };
+		AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseLiveActivity.swift; sourceTree = "<group>"; };
+		AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalAhDalAhWidget.swift; sourceTree = "<group>"; };
+		AF82C6842C2007E400D6A43A /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		AF82C6862C2007E500D6A43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF82C6882C2007E500D6A43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF82C6912C20081D00D6A43A /* Eclipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eclipse.swift; sourceTree = "<group>"; };
+		AF82C6952C20086500D6A43A /* EclipseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseViewModel.swift; sourceTree = "<group>"; };
+		AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseDataManager.swift; sourceTree = "<group>"; };
+		AF82C69C2C204E9900D6A43A /* EclipseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseView.swift; sourceTree = "<group>"; };
+		AF82C69E2C206C1D00D6A43A /* eclipses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eclipses.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +82,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF82C6742C2007E400D6A43A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF82C67C2C2007E400D6A43A /* SwiftUI.framework in Frameworks */,
+				AF82C67A2C2007E400D6A43A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				AF82C6642C1F207800D6A43A /* DalAhDalAh */,
+				AF82C67D2C2007E400D6A43A /* DalAhDalAhWidget */,
+				AF82C6782C2007E400D6A43A /* Frameworks */,
 				AF82C6632C1F207800D6A43A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AF82C6622C1F207800D6A43A /* DalAhDalAh.app */,
+				AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +116,12 @@
 		AF82C6642C1F207800D6A43A /* DalAhDalAh */ = {
 			isa = PBXGroup;
 			children = (
+				AF82C69E2C206C1D00D6A43A /* eclipses.json */,
+				AF82C6982C20092300D6A43A /* Manager */,
+				AF82C6942C20084900D6A43A /* ViewModel */,
+				AF82C6932C20083500D6A43A /* View */,
+				AF82C6902C20080F00D6A43A /* Model */,
 				AF82C6652C1F207800D6A43A /* DalAhDalAhApp.swift */,
-				AF82C6672C1F207800D6A43A /* ContentView.swift */,
 				AF82C6692C1F207900D6A43A /* Assets.xcassets */,
 				AF82C66B2C1F207900D6A43A /* Preview Content */,
 			);
@@ -67,6 +136,60 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AF82C6782C2007E400D6A43A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6792C2007E400D6A43A /* WidgetKit.framework */,
+				AF82C67B2C2007E400D6A43A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF82C67D2C2007E400D6A43A /* DalAhDalAhWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */,
+				AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */,
+				AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */,
+				AF82C6842C2007E400D6A43A /* AppIntent.swift */,
+				AF82C6862C2007E500D6A43A /* Assets.xcassets */,
+				AF82C6882C2007E500D6A43A /* Info.plist */,
+			);
+			path = DalAhDalAhWidget;
+			sourceTree = "<group>";
+		};
+		AF82C6902C20080F00D6A43A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6912C20081D00D6A43A /* Eclipse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF82C6932C20083500D6A43A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C69C2C204E9900D6A43A /* EclipseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF82C6942C20084900D6A43A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6952C20086500D6A43A /* EclipseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF82C6982C20092300D6A43A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +200,34 @@
 				AF82C65E2C1F207800D6A43A /* Sources */,
 				AF82C65F2C1F207800D6A43A /* Frameworks */,
 				AF82C6602C1F207800D6A43A /* Resources */,
+				AF82C68F2C2007E500D6A43A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF82C68A2C2007E500D6A43A /* PBXTargetDependency */,
 			);
 			name = DalAhDalAh;
 			productName = DalAhDalAh;
 			productReference = AF82C6622C1F207800D6A43A /* DalAhDalAh.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AF82C6762C2007E400D6A43A /* DalAhDalAhWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF82C68C2C2007E500D6A43A /* Build configuration list for PBXNativeTarget "DalAhDalAhWidgetExtension" */;
+			buildPhases = (
+				AF82C6732C2007E400D6A43A /* Sources */,
+				AF82C6742C2007E400D6A43A /* Frameworks */,
+				AF82C6752C2007E400D6A43A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DalAhDalAhWidgetExtension;
+			productName = DalAhDalAhWidgetExtension;
+			productReference = AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +240,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					AF82C6612C1F207800D6A43A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AF82C6762C2007E400D6A43A = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				AF82C6612C1F207800D6A43A /* DalAhDalAh */,
+				AF82C6762C2007E400D6A43A /* DalAhDalAhWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +273,16 @@
 			files = (
 				AF82C66D2C1F207900D6A43A /* Preview Assets.xcassets in Resources */,
 				AF82C66A2C1F207900D6A43A /* Assets.xcassets in Resources */,
+				AF82C69F2C206C1D00D6A43A /* eclipses.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF82C6752C2007E400D6A43A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF82C6872C2007E500D6A43A /* Assets.xcassets in Resources */,
+				AF82C6A02C206C1D00D6A43A /* eclipses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +293,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF82C6682C1F207800D6A43A /* ContentView.swift in Sources */,
+				AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */,
+				AF82C69A2C204E5100D6A43A /* EclipseDataManager.swift in Sources */,
+				AF82C69D2C204E9900D6A43A /* EclipseView.swift in Sources */,
+				AF82C6922C20081D00D6A43A /* Eclipse.swift in Sources */,
+				AF82C6962C20086500D6A43A /* EclipseViewModel.swift in Sources */,
 				AF82C6662C1F207800D6A43A /* DalAhDalAhApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF82C6732C2007E400D6A43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF82C6812C2007E400D6A43A /* EclipseLiveActivity.swift in Sources */,
+				AF82C6A12C2074B100D6A43A /* Eclipse.swift in Sources */,
+				AF82C69B2C204E7B00D6A43A /* EclipseDataManager.swift in Sources */,
+				AF82C6852C2007E400D6A43A /* AppIntent.swift in Sources */,
+				AF82C67F2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift in Sources */,
+				AF82C6832C2007E400D6A43A /* DalAhDalAhWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF82C68A2C2007E500D6A43A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF82C6762C2007E400D6A43A /* DalAhDalAhWidgetExtension */;
+			targetProxy = AF82C6892C2007E500D6A43A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF82C66E2C1F207900D6A43A /* Debug */ = {
@@ -267,6 +448,7 @@
 		AF82C6712C1F207900D6A43A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -275,6 +457,7 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,6 +483,7 @@
 		AF82C6722C1F207900D6A43A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +492,7 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -330,6 +515,60 @@
 			};
 			name = Release;
 		};
+		AF82C68D2C2007E500D6A43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DalAhDalAhWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DalAhDalAhWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.DalAhDalAh.DalAhDalAhWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF82C68E2C2007E500D6A43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DalAhDalAhWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DalAhDalAhWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.DalAhDalAh.DalAhDalAhWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +586,15 @@
 			buildConfigurations = (
 				AF82C6712C1F207900D6A43A /* Debug */,
 				AF82C6722C1F207900D6A43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF82C68C2C2007E500D6A43A /* Build configuration list for PBXNativeTarget "DalAhDalAhWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF82C68D2C2007E500D6A43A /* Debug */,
+				AF82C68E2C2007E500D6A43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct DalAhDalAhWidgetBundle: WidgetBundle {
     var body: some Widget {
-        DalAhDalAhWidget()
-        DalAhDalAhWidgetLiveActivity()
+//        DalAhDalAhWidget()
+        EclipseLiveActivity()
     }
 }
