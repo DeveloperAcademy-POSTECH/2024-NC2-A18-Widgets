@@ -31,23 +31,55 @@ struct DynamicAtivityForLockScreen: View {
     var body: some View {
         let timeRange : ClosedRange<Date> =
         context.attributes.eclipseStartTime ... context.attributes.eclipseEndTime
-        VStack(spacing: 12){
-            ProgressView(timerInterval:timeRange, countsDown: false)
+        
+        
+        RoundedRectangle(cornerRadius: 15, style: .continuous)
+            .fill(.cyan.opacity(0.2))
+        VStack(spacing: 0){
+            
+            ProgressView(timerInterval: timeRange, countsDown: false) {
+                Text("경과 시간 ")
+            }
+            
             HStack{
                 VStack{
                     Text(context.attributes.eclipseStartTime, style: .time)
                     Text("시작")
+                    
                 }
+                .font(.footnote)
                 Spacer()
                 VStack{
                     Text(context.attributes.eclipseEndTime, style: .time)
                     Text("종료")
                 }
+                .font(.footnote)
             }
-            .padding(.horizontal)
+            
         }
+        
+        
     }
 }
+
+struct CompactTrailingView : View {
+    
+    let context: ActivityViewContext<EclipseAttributes>
+    var body: some View{
+        
+        let timeRange : ClosedRange<Date> =
+        context.attributes.eclipseStartTime ... context.attributes.eclipseEndTime
+        ProgressView(timerInterval: timeRange,countsDown: false) {
+            
+        } currentValueLabel: {
+            Text("G")
+        }
+        .progressViewStyle(.circular)
+        
+        
+    }
+}
+
 
 struct EclipseLiveActivity: Widget {
     var body: some WidgetConfiguration {
@@ -66,13 +98,12 @@ struct EclipseLiveActivity: Widget {
                     Text("Trailing")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    
-                    // more content
+                    Text("Bottom")
                 }
             } compactLeading: {
                 Text("L")
             } compactTrailing: {
-             
+                CompactTrailingView(context: context)
             } minimal: {
              
             }
