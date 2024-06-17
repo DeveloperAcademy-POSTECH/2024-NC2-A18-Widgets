@@ -14,7 +14,7 @@
 		AF82C67C2C2007E400D6A43A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF82C67B2C2007E400D6A43A /* SwiftUI.framework */; };
 		AF82C67F2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */; };
 		AF82C6812C2007E400D6A43A /* EclipseLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */; };
-		AF82C6832C2007E400D6A43A /* DalAhDalAhWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */; };
+		AF82C6832C2007E400D6A43A /* EclipseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6822C2007E400D6A43A /* EclipseWidget.swift */; };
 		AF82C6852C2007E400D6A43A /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6842C2007E400D6A43A /* AppIntent.swift */; };
 		AF82C6872C2007E500D6A43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C6862C2007E500D6A43A /* Assets.xcassets */; };
 		AF82C68B2C2007E500D6A43A /* DalAhDalAhWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,7 +63,7 @@
 		AF82C67B2C2007E400D6A43A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalAhDalAhWidgetBundle.swift; sourceTree = "<group>"; };
 		AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseLiveActivity.swift; sourceTree = "<group>"; };
-		AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalAhDalAhWidget.swift; sourceTree = "<group>"; };
+		AF82C6822C2007E400D6A43A /* EclipseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseWidget.swift; sourceTree = "<group>"; };
 		AF82C6842C2007E400D6A43A /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		AF82C6862C2007E500D6A43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF82C6882C2007E500D6A43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			children = (
 				AF82C67E2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift */,
 				AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */,
-				AF82C6822C2007E400D6A43A /* DalAhDalAhWidget.swift */,
+				AF82C6822C2007E400D6A43A /* EclipseWidget.swift */,
 				AF82C6842C2007E400D6A43A /* AppIntent.swift */,
 				AF82C6862C2007E500D6A43A /* Assets.xcassets */,
 				AF82C6882C2007E500D6A43A /* Info.plist */,
@@ -311,7 +311,7 @@
 				AF82C69B2C204E7B00D6A43A /* EclipseDataManager.swift in Sources */,
 				AF82C6852C2007E400D6A43A /* AppIntent.swift in Sources */,
 				AF82C67F2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift in Sources */,
-				AF82C6832C2007E400D6A43A /* DalAhDalAhWidget.swift in Sources */,
+				AF82C6832C2007E400D6A43A /* EclipseWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
