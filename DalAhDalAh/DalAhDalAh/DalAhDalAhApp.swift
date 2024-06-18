@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct DalAhDalAhApp: App {
     @State private var vm = EclipseViewModel()
+    @State private var locationManager = LocationManager()
     
     var body: some Scene {
         WindowGroup {

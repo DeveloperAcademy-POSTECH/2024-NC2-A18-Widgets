@@ -34,12 +34,14 @@ struct DynamicAtivityForLockScreen: View {
         // Live Activity Max Height 220 pixels
         ZStack{
             
-            LinearGradient(colors: [Color("color2").opacity(0),Color("color1")], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color("color2").opacity(0.5), Color("color1")], startPoint: .top, endPoint: .bottom)
             
-            Image("fox2")
+            Image("fox")
                 .resizable()
                 .frame(width: 200, height: 150)
-                .offset(y: -20)
+                
+            
+            LinearGradient(colors: [Color("color3").opacity(0),Color("color3").opacity(0), Color("color3").opacity(1.0)], startPoint: .top, endPoint: .bottom)
             
             VStack(spacing: 12){
                 
@@ -53,11 +55,16 @@ struct DynamicAtivityForLockScreen: View {
                     } currentValueLabel: {
                         Text("")
                     }
+                    .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                    //.scaleEffect(x: 1, y: 3)
+                    .offset(y: 10)
+                    
                     
                     Text(context.attributes.eclipseEndTime, style: .time)
                     
                 }
                 .font(.footnote)
+                .foregroundStyle(.white)
                 .frame(maxWidth: .infinity, alignment: .center)
                 
                 

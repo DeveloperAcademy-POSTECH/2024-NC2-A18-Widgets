@@ -136,7 +136,7 @@ class EclipseViewModel {
                   let runningActivity = Activity<EclipseAttributes>.activities.first(where: { $0.id == activityID }) else {
                 return
             }
-            guard let activity = activity,
+            guard 
                   let eclipse = eclipse,
                   let startTime = eclipse.startDateTime,
                   let endTime = eclipse.endDateTime else { return }
