@@ -26,12 +26,12 @@ struct EclipseView: View {
                 
                 if !vm.isActivityStarted {
                     Button("Start Eclipse Activity") {
-                        vm.startEclipseActivity()
+                        vm.start()
                     }
                     .padding()
                 } else {
                     Button("End Activity") {
-                        vm.endEclipseActivity()
+                        vm.endActivity()
                     }
                     .padding()
                 }
