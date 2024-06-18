@@ -71,15 +71,42 @@ struct SmallEclipseWidgetView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            if let daysUntilEclipse = entry.daysUntilEclipse {
-                Text("Next eclipse in \(daysUntilEclipse) days")
-                    .font(.headline)
-            } else {
-                Text("No upcoming eclipse")
-                    .font(.headline)
+    
+            VStack (alignment:.center){
+                if let daysUntilEclipse = entry.daysUntilEclipse {
+                    
+                    VStack{
+                        ZStack{
+                            
+                            Image("별")
+                                .resizable()
+                                .frame(width: 131, height: 41)
+                                .offset(y: -18)
+                            
+                            Image("달")
+                                .resizable()
+                                .frame(width: 63, height: 63)
+                            
+                        }
+                        
+                        VStack(spacing: 2){
+                          
+                            Text("다음 소원까지")
+                                .font(.system(size: 14))
+                                .fontWeight(.regular)
+                            
+                            
+                            Text("\(daysUntilEclipse)일")
+                                .font(.system(size: 20))
+                                .fontWeight(.semibold)
+                        }
+                        .padding(.top, 8)
+                    }
+                    
+                }
             }
-        }
+            
+
     }
 }
 
@@ -128,11 +155,18 @@ struct AccessoryCircularEclipseWidgetView: View {
 
     var body: some View {
         ZStack {
-            Circle().fill(Color.blue)
+            Image("Vector")
+                .resizable()
+                .frame(width: 52, height: 53)
+            
             if let daysUntilEclipse = entry.daysUntilEclipse {
                 Text("\(daysUntilEclipse)")
-                    .font(.headline)
-                    .foregroundColor(.white)
+                    .font(.system(size: 16))
+                    .bold()
+                    .foregroundStyle(
+                        Color.black.shadow(.inner(color: .white.opacity(0.5),radius: 2)))
+                    .offset(y: 8)
+
             } else {
                 Text("N/A")
                     .font(.headline)
@@ -201,7 +235,9 @@ struct EclipseWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             EclipseWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(for: .widget){
+                    LinearGradient(colors: [Color("widgetback").opacity(0.5), Color("widgetback2")], startPoint: .top, endPoint: .bottom)
+                }
         }
         .configurationDisplayName("Eclipse Widget")
         .description("Shows the days until the next eclipse and the current moon phase.")

@@ -36,12 +36,19 @@ struct DynamicAtivityForLockScreen: View {
             
             LinearGradient(colors: [Color("color2").opacity(0.5), Color("color1")], startPoint: .top, endPoint: .bottom)
             
-            Image("fox")
+            Image("star")
                 .resizable()
-                .frame(width: 200, height: 150)
-                
+                .frame(width: 327, height: 43)
+                .offset(y: -45)
             
-            LinearGradient(colors: [Color("color3").opacity(0),Color("color3").opacity(0), Color("color3").opacity(1.0)], startPoint: .top, endPoint: .bottom)
+            
+            Image("여우 벡터")
+                .resizable()
+                .frame(width: 226, height: 160)
+                .shadow(color: .white, radius: 20)
+            
+            LinearGradient(colors: [Color("foreground").opacity(0),Color("foreground").opacity(0),Color("foreground").opacity(0),Color("foreground")], startPoint: .top, endPoint: .bottom)
+            
             
             VStack(spacing: 12){
                 
@@ -49,7 +56,7 @@ struct DynamicAtivityForLockScreen: View {
                     
                     Text(context.attributes.eclipseStartTime, style: .time)
                     
-            
+                    
                     ProgressView(timerInterval: timeRange,countsDown: false) {
                         
                     } currentValueLabel: {
@@ -71,8 +78,7 @@ struct DynamicAtivityForLockScreen: View {
             }
             .padding()
             .frame(maxHeight: .infinity, alignment: .bottom)
-
-
+            
         }
         .activityBackgroundTint(Color.clear.opacity(0.1))
     }
@@ -88,9 +94,10 @@ struct CompactTrailingView : View {
         ProgressView(timerInterval: timeRange,countsDown: false) {
             
         } currentValueLabel: {
-            Text("G")
+            Text("")
         }
-        .progressViewStyle(.circular)
+        .progressViewStyle(CircularProgressViewStyle(tint: Color("ring")))
+        .foregroundStyle(.yellow)
         
         
     }
@@ -108,16 +115,52 @@ struct EclipseLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                   
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Image("moon")
+                        .resizable()
+                        .frame(width: 61, height: 30)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
+                    let timeRange : ClosedRange<Date> =
+                    context.attributes.eclipseStartTime ... context.attributes.eclipseEndTime
+                    VStack(alignment: .leading){
+                        HStack(spacing:2){
+                            Text("지금은 소원을 빌 시간")
+                                .font(.headline)
+                                .bold()
+                            Image("Vector")
+                                .resizable()
+                                .frame(width: 16, height: 16)
+                            
+                        }
+                        HStack(spacing: 4){
+                            
+                            Text(context.attributes.eclipseStartTime, style: .time)
+                            
+                            
+                            ProgressView(timerInterval: timeRange,countsDown: false) {
+                                
+                            } currentValueLabel: {
+                                Text("")
+                            }
+                            .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                            //.scaleEffect(x: 1, y: 3)
+                            .offset(y: 10)
+                            
+                            
+                            Text(context.attributes.eclipseEndTime, style: .time)
+                            
+                        }
+                        
+                    }
                 }
             } compactLeading: {
-                Text("L")
+                Image("여우머리")
+                    .resizable()
+                    .frame(width: 23, height: 23)
+                    
             } compactTrailing: {
                 CompactTrailingView(context: context)
             } minimal: {
