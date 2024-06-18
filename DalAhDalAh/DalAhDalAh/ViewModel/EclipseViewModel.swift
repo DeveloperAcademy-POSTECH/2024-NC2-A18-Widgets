@@ -11,7 +11,6 @@ import SwiftUI
 class EclipseViewModel {
     
     var eclipse: Eclipse?
-    var isActivityStarted = false
     private var activity: Activity<EclipseAttributes>?
     private var timer: Timer?
     @MainActor private(set) var activityID: String?
@@ -63,7 +62,6 @@ class EclipseViewModel {
         Task{
             await cancelAllRunningActivities()
             startNewLiveActivity()
-            isActivityStarted = true
         }
     }
     
@@ -179,7 +177,6 @@ class EclipseViewModel {
             await runningActivity.end(activityContent, dismissalPolicy: .immediate)
             await MainActor.run { self.activityID = nil }
             
-            isActivityStarted = false
         }
         stopTimer()
     }

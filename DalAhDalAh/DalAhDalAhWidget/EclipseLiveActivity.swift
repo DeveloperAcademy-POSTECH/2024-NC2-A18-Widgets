@@ -33,34 +33,41 @@ struct DynamicAtivityForLockScreen: View {
         
         // Live Activity Max Height 220 pixels
         ZStack{
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .fill(.cyan.opacity(0.2).gradient)
+            
+            LinearGradient(colors: [Color("color2").opacity(0),Color("color1")], startPoint: .top, endPoint: .bottom)
+            
+            Image("fox2")
+                .resizable()
+                .frame(width: 200, height: 150)
+                .offset(y: -20)
+            
             VStack(spacing: 12){
-                ProgressView(timerInterval: timeRange, countsDown: false) {
-                    Text("경과 시간 ")
-                }
                 
-                HStack{
-                    VStack{
-                        Text(context.attributes.eclipseStartTime, style: .time)
-                        Text("시작")
+                HStack(spacing: 4){
+                    
+                    Text(context.attributes.eclipseStartTime, style: .time)
+                    
+            
+                    ProgressView(timerInterval: timeRange,countsDown: false) {
                         
+                    } currentValueLabel: {
+                        Text("")
                     }
-                    .font(.callout)
-                    Spacer()
-                    VStack{
-                        Text(context.attributes.eclipseEndTime, style: .time)
-                        Text("종료")
-                    }
-                    .font(.callout)
+                    
+                    Text(context.attributes.eclipseEndTime, style: .time)
+                    
                 }
+                .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .center)
+                
                 
             }
             .padding()
             .frame(maxHeight: .infinity, alignment: .bottom)
-            
+
+
         }
+        .activityBackgroundTint(Color.clear.opacity(0.1))
     }
 }
 

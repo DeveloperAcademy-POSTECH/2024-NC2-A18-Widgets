@@ -17,26 +17,14 @@ struct EclipseView: View {
             Text("Eclipse Tracker")
                 .font(.largeTitle)
             
-            if let eclipse = vm.eclipse {
-                Text("Date: \(eclipse.date)")
-                Text("Start Time: \(eclipse.startTime)")
-                Text("End Time: \(eclipse.endTime)")
-                Text("Max Time: \(eclipse.maxTime)")
-                Text("Type: \(eclipse.type.rawValue)")
-                
-                if !vm.isActivityStarted {
-                    Button("Start Eclipse Activity") {
-                        vm.start()
-                    }
-                    .padding()
-                } else {
-                    Button("End Activity") {
-                        vm.endActivity()
-                    }
-                    .padding()
-                }
-            } else {
-                Text("No upcoming eclipse found")
+            Button("Start Eclipse Activity"){
+                vm.start()
+            }
+            Button("Update Activity"){
+                vm.updateLiveActivity()
+            }
+            Button("End Activity"){
+                vm.endActivity()
             }
         }
         .padding()
