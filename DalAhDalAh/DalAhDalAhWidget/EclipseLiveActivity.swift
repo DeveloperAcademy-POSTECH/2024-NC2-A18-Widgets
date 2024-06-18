@@ -12,8 +12,7 @@ import SwiftUI
 struct EclipseAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        // MARK:  현재 다이나믹 activity에 대해 동적정보값을 사용하는게 없음
-        // ProgressView를 closedRange를 통해 처리해서
+        // MARK: ProgressView를 closedRange를 통해 처리해서  현재 다이나믹 activity에 대해 동적정보값을 사용하는게 없음
         var progress: Double
         var currentTime: Date
     }
@@ -32,33 +31,36 @@ struct DynamicAtivityForLockScreen: View {
         let timeRange : ClosedRange<Date> =
         context.attributes.eclipseStartTime ... context.attributes.eclipseEndTime
         
-        
-        RoundedRectangle(cornerRadius: 15, style: .continuous)
-            .fill(.cyan.opacity(0.2))
-        VStack(spacing: 0){
-            
-            ProgressView(timerInterval: timeRange, countsDown: false) {
-                Text("경과 시간 ")
-            }
-            
-            HStack{
-                VStack{
-                    Text(context.attributes.eclipseStartTime, style: .time)
-                    Text("시작")
-                    
+        // Live Activity Max Height 220 pixels
+        ZStack{
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                .fill(.cyan.opacity(0.2).gradient)
+            VStack(spacing: 12){
+                ProgressView(timerInterval: timeRange, countsDown: false) {
+                    Text("경과 시간 ")
                 }
-                .font(.footnote)
-                Spacer()
-                VStack{
-                    Text(context.attributes.eclipseEndTime, style: .time)
-                    Text("종료")
+                
+                HStack{
+                    VStack{
+                        Text(context.attributes.eclipseStartTime, style: .time)
+                        Text("시작")
+                        
+                    }
+                    .font(.callout)
+                    Spacer()
+                    VStack{
+                        Text(context.attributes.eclipseEndTime, style: .time)
+                        Text("종료")
+                    }
+                    .font(.callout)
                 }
-                .font(.footnote)
+                .frame(maxWidth: .infinity, alignment: .center)
+                
             }
+            .padding()
+            .frame(maxHeight: .infinity, alignment: .bottom)
             
         }
-        
-        
     }
 }
 

@@ -26,7 +26,7 @@ class EclipseViewModel {
         // progress 진행상태를 실시간으로 보여줄 수 있는 임시 데이터
         let now = Date()
         let startTime = now.addingTimeInterval(5)
-        let endTime = now.addingTimeInterval(30)
+        let endTime = now.addingTimeInterval(60)
         let maxTime = now.addingTimeInterval(20)
 
         let temporaryEclipse = Eclipse(
