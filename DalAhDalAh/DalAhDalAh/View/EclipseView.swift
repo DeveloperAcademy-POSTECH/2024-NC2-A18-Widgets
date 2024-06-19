@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EclipseView: View {
     
-    @Environment(EclipseViewModel.self) var vm: EclipseViewModel
+    @Environment(EclipseHelper.self) var vm: EclipseHelper
 
     var body: some View {
         

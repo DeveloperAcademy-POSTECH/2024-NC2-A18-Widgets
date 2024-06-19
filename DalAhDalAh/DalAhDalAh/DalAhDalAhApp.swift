@@ -9,13 +9,17 @@ import SwiftUI
 
 @main
 struct DalAhDalAhApp: App {
-    @State private var vm = EclipseViewModel()
+    @State private var eclipseHelper = EclipseHelper()
     @State private var locationManager = LocationManager()
     
     var body: some Scene {
-        WindowGroup {
-            EclipseView()
+        WindowGroup {    
+            ContentView()
+                .onAppear{
+                    locationManager.startLocationServices()
+                }
         }
-        .environment(vm)
+        .environment(eclipseHelper)
+        .environment(locationManager)
     }
 }

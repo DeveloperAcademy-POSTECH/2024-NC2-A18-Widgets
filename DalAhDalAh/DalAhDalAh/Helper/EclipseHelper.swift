@@ -8,7 +8,7 @@ import ActivityKit
 import SwiftUI
 
 @Observable
-class EclipseViewModel {
+class EclipseHelper {
     
     var eclipse: Eclipse?
     private var activity: Activity<EclipseAttributes>?

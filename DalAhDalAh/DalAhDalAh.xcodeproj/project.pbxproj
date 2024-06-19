@@ -19,7 +19,7 @@
 		AF82C6872C2007E500D6A43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C6862C2007E500D6A43A /* Assets.xcassets */; };
 		AF82C68B2C2007E500D6A43A /* DalAhDalAhWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF82C6772C2007E400D6A43A /* DalAhDalAhWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AF82C6922C20081D00D6A43A /* Eclipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6912C20081D00D6A43A /* Eclipse.swift */; };
-		AF82C6962C20086500D6A43A /* EclipseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6952C20086500D6A43A /* EclipseViewModel.swift */; };
+		AF82C6962C20086500D6A43A /* EclipseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6952C20086500D6A43A /* EclipseHelper.swift */; };
 		AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6802C2007E400D6A43A /* EclipseLiveActivity.swift */; };
 		AF82C69A2C204E5100D6A43A /* EclipseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */; };
 		AF82C69B2C204E7B00D6A43A /* EclipseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */; };
@@ -27,9 +27,12 @@
 		AF82C69F2C206C1D00D6A43A /* eclipses.json in Resources */ = {isa = PBXBuildFile; fileRef = AF82C69E2C206C1D00D6A43A /* eclipses.json */; };
 		AF82C6A02C206C1D00D6A43A /* eclipses.json in Resources */ = {isa = PBXBuildFile; fileRef = AF82C69E2C206C1D00D6A43A /* eclipses.json */; };
 		AF82C6A12C2074B100D6A43A /* Eclipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6912C20081D00D6A43A /* Eclipse.swift */; };
-		AF82C6AC2C21792900D6A43A /* MoonPhaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6AB2C21792900D6A43A /* MoonPhaseManager.swift */; };
+		AF82C6AC2C21792900D6A43A /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6AB2C21792900D6A43A /* WeatherManager.swift */; };
 		AF82C6AE2C21796500D6A43A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6AD2C21796500D6A43A /* LocationManager.swift */; };
 		AF82C6B02C21798000D6A43A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6AF2C21798000D6A43A /* City.swift */; };
+		AF82C6B52C22645200D6A43A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B42C22645200D6A43A /* HomeView.swift */; };
+		AF82C6B72C2268A300D6A43A /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */; };
+		AF82C6B92C226B4F00D6A43A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B82C226B4F00D6A43A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,14 +74,17 @@
 		AF82C6862C2007E500D6A43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF82C6882C2007E500D6A43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF82C6912C20081D00D6A43A /* Eclipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eclipse.swift; sourceTree = "<group>"; };
-		AF82C6952C20086500D6A43A /* EclipseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseViewModel.swift; sourceTree = "<group>"; };
+		AF82C6952C20086500D6A43A /* EclipseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseHelper.swift; sourceTree = "<group>"; };
 		AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseDataManager.swift; sourceTree = "<group>"; };
 		AF82C69C2C204E9900D6A43A /* EclipseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EclipseView.swift; sourceTree = "<group>"; };
 		AF82C69E2C206C1D00D6A43A /* eclipses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eclipses.json; sourceTree = "<group>"; };
 		AF82C6AA2C2177E700D6A43A /* DalAhDalAh.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DalAhDalAh.entitlements; sourceTree = "<group>"; };
-		AF82C6AB2C21792900D6A43A /* MoonPhaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhaseManager.swift; sourceTree = "<group>"; };
+		AF82C6AB2C21792900D6A43A /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		AF82C6AD2C21796500D6A43A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AF82C6AF2C21798000D6A43A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		AF82C6B42C22645200D6A43A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
+		AF82C6B82C226B4F00D6A43A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +129,16 @@
 		AF82C6642C1F207800D6A43A /* DalAhDalAh */ = {
 			isa = PBXGroup;
 			children = (
+				AF82C6B32C22614300D6A43A /* Helper */,
 				AF82C6AA2C2177E700D6A43A /* DalAhDalAh.entitlements */,
 				AF82C69E2C206C1D00D6A43A /* eclipses.json */,
 				AF82C6982C20092300D6A43A /* Manager */,
-				AF82C6942C20084900D6A43A /* ViewModel */,
 				AF82C6932C20083500D6A43A /* View */,
 				AF82C6902C20080F00D6A43A /* Model */,
 				AF82C6652C1F207800D6A43A /* DalAhDalAhApp.swift */,
 				AF82C6692C1F207900D6A43A /* Assets.xcassets */,
 				AF82C66B2C1F207900D6A43A /* Preview Content */,
+				AF82C6B82C226B4F00D6A43A /* ContentView.swift */,
 			);
 			path = DalAhDalAh;
 			sourceTree = "<group>";
@@ -179,26 +186,28 @@
 			isa = PBXGroup;
 			children = (
 				AF82C69C2C204E9900D6A43A /* EclipseView.swift */,
+				AF82C6B42C22645200D6A43A /* HomeView.swift */,
+				AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AF82C6942C20084900D6A43A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AF82C6952C20086500D6A43A /* EclipseViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AF82C6982C20092300D6A43A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */,
-				AF82C6AB2C21792900D6A43A /* MoonPhaseManager.swift */,
+				AF82C6AB2C21792900D6A43A /* WeatherManager.swift */,
 				AF82C6AD2C21796500D6A43A /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		AF82C6B32C22614300D6A43A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6952C20086500D6A43A /* EclipseHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,14 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */,
-				AF82C6AC2C21792900D6A43A /* MoonPhaseManager.swift in Sources */,
+				AF82C6AC2C21792900D6A43A /* WeatherManager.swift in Sources */,
+				AF82C6B92C226B4F00D6A43A /* ContentView.swift in Sources */,
 				AF82C6B02C21798000D6A43A /* City.swift in Sources */,
+				AF82C6B52C22645200D6A43A /* HomeView.swift in Sources */,
 				AF82C6AE2C21796500D6A43A /* LocationManager.swift in Sources */,
 				AF82C69A2C204E5100D6A43A /* EclipseDataManager.swift in Sources */,
 				AF82C69D2C204E9900D6A43A /* EclipseView.swift in Sources */,
 				AF82C6922C20081D00D6A43A /* Eclipse.swift in Sources */,
-				AF82C6962C20086500D6A43A /* EclipseViewModel.swift in Sources */,
+				AF82C6962C20086500D6A43A /* EclipseHelper.swift in Sources */,
 				AF82C6662C1F207800D6A43A /* DalAhDalAhApp.swift in Sources */,
+				AF82C6B72C2268A300D6A43A /* LocationDeniedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +484,8 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -508,6 +522,8 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

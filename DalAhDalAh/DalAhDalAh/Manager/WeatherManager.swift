@@ -9,8 +9,8 @@ import SwiftUI
 import WeatherKit
 import CoreLocation
 
-class MoonPhaseManager {
-    static let shared = MoonPhaseManager()
+class WeatherManager {
+    static let shared = WeatherManager()
     let service = WeatherService.shared
     
     var temperatureFormatter: MeasurementFormatter = {
