@@ -33,6 +33,8 @@
 		AF82C6B52C22645200D6A43A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B42C22645200D6A43A /* HomeView.swift */; };
 		AF82C6B72C2268A300D6A43A /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */; };
 		AF82C6B92C226B4F00D6A43A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B82C226B4F00D6A43A /* ContentView.swift */; };
+		AF82C6BB2C2277E800D6A43A /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6BA2C2277E800D6A43A /* LocalNotification.swift */; };
+		AF82C6BD2C22792900D6A43A /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		AF82C6B42C22645200D6A43A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
 		AF82C6B82C226B4F00D6A43A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF82C6BA2C2277E800D6A43A /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			children = (
 				AF82C6912C20081D00D6A43A /* Eclipse.swift */,
 				AF82C6AF2C21798000D6A43A /* City.swift */,
+				AF82C6BA2C2277E800D6A43A /* LocalNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */,
 				AF82C6AB2C21792900D6A43A /* WeatherManager.swift */,
 				AF82C6AD2C21796500D6A43A /* LocationManager.swift */,
+				AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF82C6BD2C22792900D6A43A /* LocalNotificationManager.swift in Sources */,
 				AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */,
+				AF82C6BB2C2277E800D6A43A /* LocalNotification.swift in Sources */,
 				AF82C6AC2C21792900D6A43A /* WeatherManager.swift in Sources */,
 				AF82C6B92C226B4F00D6A43A /* ContentView.swift in Sources */,
 				AF82C6B02C21798000D6A43A /* City.swift in Sources */,

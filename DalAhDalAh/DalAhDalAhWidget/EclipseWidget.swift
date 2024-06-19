@@ -72,10 +72,10 @@ struct SmallEclipseWidgetView: View {
 
     var body: some View {
     
-            VStack (alignment:.center){
+        VStack (alignment:.center,spacing:0){
                 if let daysUntilEclipse = entry.daysUntilEclipse {
                     
-                    VStack{
+                    VStack(spacing: 0){
                         ZStack{
                             
                             Image("별")
@@ -85,22 +85,22 @@ struct SmallEclipseWidgetView: View {
                             
                             Image("달")
                                 .resizable()
-                                .frame(width: 63, height: 63)
+                                .frame(width: 56, height: 56)
                             
                         }
                         
                         VStack(spacing: 2){
                           
                             Text("다음 소원까지")
-                                .font(.system(size: 14))
+                                .font(.subheadline)
                                 .fontWeight(.regular)
                             
                             
                             Text("\(daysUntilEclipse)일")
-                                .font(.system(size: 20))
+                                .font(.title3)
                                 .fontWeight(.semibold)
                         }
-                        .padding(.top, 8)
+                        .padding(.top,12)
                     }
                     
                 }
@@ -236,7 +236,7 @@ struct EclipseWidget: Widget {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             EclipseWidgetEntryView(entry: entry)
                 .containerBackground(for: .widget){
-                    LinearGradient(colors: [Color("widgetback").opacity(0.5), Color("widgetback2")], startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: [Color("widgetback"), Color("widgetback2")], startPoint: .top, endPoint: .bottom)
                 }
         }
         .configurationDisplayName("Eclipse Widget")
@@ -257,33 +257,5 @@ extension ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
         intent.favoriteCharacter = "fineapple"
         return intent
-    }
-}
-
-
-struct EclipseWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemLarge))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-
-            EclipseWidgetEntryView(entry: SimpleEntry(date: Date(), daysUntilEclipse: 5, moonPhase: "🌕", configuration: ConfigurationAppIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        }
     }
 }

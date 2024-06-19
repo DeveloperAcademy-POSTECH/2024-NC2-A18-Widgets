@@ -10,22 +10,31 @@ import WidgetKit
 import SwiftUI
 
 struct EclipseAttributes: ActivityAttributes {
+    
+    // LiveActivity에서 실시간으로 변경되어야하는 값들은
+    // ActivityAttributes 내부의 ContentState를 통해 관리합니다.
     public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        // MARK: ProgressView를 closedRange를 통해 처리해서  현재 다이나믹 activity에 대해 동적정보값을 사용하는게 없음
+        /// Activity의 동적값들
+        /// MARK: ProgressView를 closedRange를 통해 처리해서  현재 다이나믹 activity의 화면을
+        /// 표시할 때 동적 정보를 표시하는게 없습니다.
+        /// 기존에는 progressView의 value 값과 현재시각을 표시하기 위해 ContentState를 선언 하였으나
+        /// 앱이 Foreground에 없으면 값의 업데이트가 중지되는 현상의 발견하여
+        /// ProgressView의 init 중 closedRange value를 받아 값 업데이트를 View 내부에서 진행하는 방식을 선택
         var progress: Double
         var currentTime: Date
     }
 
-    // Fixed non-changing properties about your activity go here!
+    // LiveActivity에서 표시할 정보중 정적인 값들은
+    // ActivityAttributes property를 통해 관리합니다.
     var eclipseStartTime: Date
     var eclipseEndTime: Date
     var eclipseMaxTime: Date
 }
 
 
-// Dynamic Activity View for Lock Screen
+// 잠금화면에 대한 LiveActivity를 구성하는 View
 struct DynamicAtivityForLockScreen: View {
+    
     let context: ActivityViewContext<EclipseAttributes>
     var body: some View {
         let timeRange : ClosedRange<Date> =
@@ -52,9 +61,11 @@ struct DynamicAtivityForLockScreen: View {
             
             VStack(spacing: 12){
                 
-                HStack(spacing: 4){
+                HStack(spacing: 8){
                     
-                    Text(context.attributes.eclipseStartTime, style: .time)
+                    Text("\(context.attributes.eclipseStartTime.toString(format: "HH:mm"))")
+                        .font(.system(size: 14))
+                        .fontWeight(.medium)
                     
                     
                     ProgressView(timerInterval: timeRange,countsDown: false) {
@@ -67,8 +78,9 @@ struct DynamicAtivityForLockScreen: View {
                     .offset(y: 10)
                     
                     
-                    Text(context.attributes.eclipseEndTime, style: .time)
-                    
+                    Text("\(context.attributes.eclipseEndTime.toString(format: "HH:mm"))")
+                        .font(.system(size: 14))
+                        .fontWeight(.medium)
                 }
                 .font(.footnote)
                 .foregroundStyle(.white)
@@ -121,23 +133,30 @@ struct EclipseLiveActivity: Widget {
                     Image("moon")
                         .resizable()
                         .frame(width: 61, height: 30)
+                        .padding(.top, 7)
+                        .padding(.trailing, 20)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     let timeRange : ClosedRange<Date> =
                     context.attributes.eclipseStartTime ... context.attributes.eclipseEndTime
-                    VStack(alignment: .leading){
-                        HStack(spacing:2){
+                    
+                    VStack(alignment: .leading, spacing: 2){
+                        HStack(spacing:6){
                             Text("지금은 소원을 빌 시간")
                                 .font(.headline)
-                                .bold()
-                            Image("Vector")
+                                .fontWeight(.semibold)
+                            
+                            Image("여우하얀머리")
                                 .resizable()
                                 .frame(width: 16, height: 16)
                             
                         }
-                        HStack(spacing: 4){
+                        
+                        HStack(spacing: 8){
                             
-                            Text(context.attributes.eclipseStartTime, style: .time)
+                            Text("\(context.attributes.eclipseStartTime.toString(format: "HH:mm"))")
+                                .font(.system(size: 14))
+                                .fontWeight(.medium)
                             
                             
                             ProgressView(timerInterval: timeRange,countsDown: false) {
@@ -146,21 +165,28 @@ struct EclipseLiveActivity: Widget {
                                 Text("")
                             }
                             .progressViewStyle(LinearProgressViewStyle(tint: .white))
-                            //.scaleEffect(x: 1, y: 3)
                             .offset(y: 10)
+                            .frame(maxWidth: 240)
                             
                             
-                            Text(context.attributes.eclipseEndTime, style: .time)
+                            Text("\(context.attributes.eclipseEndTime.toString(format: "HH:mm"))")
+                                .font(.system(size: 14))
+                                .fontWeight(.medium)
                             
                         }
                         
                     }
+                    .padding(.horizontal, 15)
+                    .padding(.bottom, -14)
+                    .offset(y: -14)
                 }
+                
+                
             } compactLeading: {
                 Image("여우머리")
                     .resizable()
                     .frame(width: 23, height: 23)
-                    
+                
             } compactTrailing: {
                 CompactTrailingView(context: context)
             } minimal: {
@@ -197,3 +223,11 @@ extension EclipseAttributes.ContentState {
     EclipseAttributes.ContentState.final
 }
 
+
+extension Date{
+    func toString(format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+}
