@@ -1,5 +1,24 @@
 # 2024-NC2-A18-Widgets-FaHe
 
+## 달아달아 
+ <img src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/2061f331-869c-4de8-b99b-9e70eb0068e3" width="256">
+
+달에 사는 여우는 햇빛이 가려지는 순간 힘을 발휘할 수 있습니다. 월식이 일어나는 날, 달을 향해 소원을 빌면 여우가 소원을 들어줍니다. 
+
+- 잠금화면 및 홈화면 위젯을 통해 다음 월식까지 남은 일수를 보여줍니다.
+ 
+   <img width="305" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/1774e045-e1ca-462a-8622-ec7aac9c4fec">
+   
+   <img width="305" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/a03129a3-a130-4422-b90f-454602a0b419">
+
+- 월식이 시작시 월식 진행 현황을 잠금화면 라이브 액티비티를 통해 알 수 있습니다.
+   <img width="305" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/9a281da8-26ac-4b01-a01c-4e07c90d93ea">
+
+- 다이니믹 아일랜드를 이용해서도 월식 진행 현황을 파악할 수 있습니다. 
+<img width="426" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/11eeb43d-23e0-4e06-9606-a93e20cc4bf8">
+<img width="426" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/95828113-d266-44b5-a26c-e9c0ffd2cfec">
+
+
 
 
 ## 팀원 소개 
