@@ -48,7 +48,7 @@ struct DynamicAtivityForLockScreen: View {
         // 잠금화면 LiveActivity의 최대 높이 값은 220 pixels 입니다.
         ZStack{
             
-            LinearGradient(colors: [Color("color2").opacity(0.5), Color("color1")], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color("color2").opacity(0.2), Color("color1").opacity(0.5), Color("color1")], startPoint: .top, endPoint: .bottom)
             
             Image("star")
                 .resizable()
