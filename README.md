@@ -301,7 +301,7 @@ struct EclipseWidget: Widget {
 ```
 
 
-## (Optional) 기술 참고 사항
+## 기술 참고 사항
 
 <aside>
 💡 App이 백그라운드 상태가 되면 앱으로부터 LiveActivity의 값을 업데이트 할 수 없습니다.
