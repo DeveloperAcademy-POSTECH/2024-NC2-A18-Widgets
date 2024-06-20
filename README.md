@@ -18,7 +18,7 @@
 
 
 - 월식이 시작시 월식 진행 현황을 잠금화면 라이브 액티비티를 통해 알 수 있습니다.
-   <img width="305" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/9a281da8-26ac-4b01-a01c-4e07c90d93ea">
+<img width="305" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A18-Widgets/assets/121593683/9a281da8-26ac-4b01-a01c-4e07c90d93ea">
 
 
 ## 팀원 소개 
