@@ -213,6 +213,7 @@ struct EclipseLiveActivity: Widget {
     ```
     
 
+
 ## Widgets
 
 - 위젯을 구성할 model을 구성합니다. 
@@ -298,6 +299,7 @@ struct EclipseWidget: Widget {
     }
 }
 ```
+
 
 ## (Optional) 기술 참고 사항
 
