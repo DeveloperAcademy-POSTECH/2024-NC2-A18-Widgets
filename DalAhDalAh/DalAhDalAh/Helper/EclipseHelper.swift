@@ -11,7 +11,8 @@ import SwiftUI
 class EclipseHelper {
     
     var eclipse: Eclipse?
-    private var activity: Activity<EclipseAttributes>?
+    var isActivityStarted = false
+    var activity: Activity<EclipseAttributes>?
     private var timer: Timer?
     @MainActor private(set) var activityID: String?
     
@@ -30,28 +31,17 @@ class EclipseHelper {
         
         let temporaryEclipse = Eclipse(
             id: UUID().uuidString,
-            date: dateFormatter.string(from: now),
-            startTime: timeFormatter.string(from: startTime),
-            endTime: timeFormatter.string(from: endTime),
-            maxTime: timeFormatter.string(from: maxTime),
+            date: Date().toString(format: "yyyy-MM-dd"),
+            startTime: startTime.toString(format: "HH:mm:ss"),
+            endTime: endTime.toString(format: "HH:mm:ss"),
+            maxTime: maxTime.toString(format: "HH:mm:ss"),
             type: .total
         )
         
         self.eclipse = temporaryEclipse
     }
     
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }
-    
-    private var timeFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        return formatter
-    }
-    
+    // 다음 월식날짜를 가져옵니다.
     func loadNextEclipse() {
         if let nextEclipse = EclipseDataManager.shared.getNextEclipse(from: Date()) {
             self.eclipse = nextEclipse
@@ -65,6 +55,7 @@ class EclipseHelper {
         }
     }
     
+    // 현재 실행중인 모든 Activites를 중지합니다.
     private func cancelAllRunningActivities() async {
         for activity in Activity<EclipseAttributes>.activities {
             
@@ -72,7 +63,7 @@ class EclipseHelper {
                 progress: 1.0,
                 currentTime: Date()
             )
-            let staleDate = Date().addingTimeInterval(60 * 5)
+            let staleDate = Date().addingTimeInterval(10)
             let activityContent = ActivityContent(state: finalContentState, staleDate: staleDate)
             
             await activity.end(activityContent, dismissalPolicy: .immediate)
@@ -106,7 +97,7 @@ class EclipseHelper {
                 currentTime: Date()
             )
             // staleDate 더이상 LivActivity가 유효하지 않은 시점을 나타냄
-            let staleDate = endTime.addingTimeInterval(60 * 5) // endTime으로부터 5분 후
+            let staleDate = endTime.addingTimeInterval(10) // endTime으로부터 5분 후
             // acitivity에 관련한 동적 데이터는 ActivityContent라는 wrapper 싸서 넣어줘야함
             let activityContent = ActivityContent(state: initialContentState, staleDate: staleDate)
             
@@ -115,7 +106,7 @@ class EclipseHelper {
             
             await MainActor.run { activityID = activity?.id }
         }
-        startTimer()
+        
     }
     
     func startTimer() {
@@ -153,10 +144,16 @@ class EclipseHelper {
                 currentTime: currentTime
             )
             
-            let staleDate = eclipse.endDateTime?.addingTimeInterval(60 * 5) ?? Date().addingTimeInterval(60 * 5)
+            let staleDate = eclipse.endDateTime?.addingTimeInterval(10) ?? Date().addingTimeInterval(10)
             let activityContent = ActivityContent(state: updatedContentState, staleDate: staleDate)
             
             await runningActivity.update(activityContent)
+            
+            // 종료 시점을 감지하고 endActivity 호출
+            if currentTime >= endTime {
+                print("end activity")
+                endActivity()
+            }
         }
     }
     
@@ -169,16 +166,16 @@ class EclipseHelper {
             
             let finalContentState = EclipseAttributes.ContentState(
                 progress: 1.0,
-                currentTime: Date()
+                currentTime: runningActivity.attributes.eclipseEndTime
             )
-            let staleDate = Date().addingTimeInterval(60 * 5)
+            let staleDate = Date().addingTimeInterval(10)
             let activityContent = ActivityContent(state: finalContentState, staleDate: staleDate)
             
             await runningActivity.end(activityContent, dismissalPolicy: .immediate)
             await MainActor.run { self.activityID = nil }
-            
+            stopTimer()
         }
-        stopTimer()
+        
     }
     
 }

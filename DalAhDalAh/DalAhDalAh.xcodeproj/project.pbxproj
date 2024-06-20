@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF06B2E52C23B56F003B8E60 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6C02C23B0B900D6A43A /* Extension+Date.swift */; };
 		AF82C6662C1F207800D6A43A /* DalAhDalAhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6652C1F207800D6A43A /* DalAhDalAhApp.swift */; };
 		AF82C66A2C1F207900D6A43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C6692C1F207900D6A43A /* Assets.xcassets */; };
 		AF82C66D2C1F207900D6A43A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF82C66C2C1F207900D6A43A /* Preview Assets.xcassets */; };
@@ -34,7 +35,7 @@
 		AF82C6B72C2268A300D6A43A /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */; };
 		AF82C6B92C226B4F00D6A43A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B82C226B4F00D6A43A /* ContentView.swift */; };
 		AF82C6BB2C2277E800D6A43A /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6BA2C2277E800D6A43A /* LocalNotification.swift */; };
-		AF82C6BD2C22792900D6A43A /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */; };
+		AF82C6C12C23B0B900D6A43A /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6C02C23B0B900D6A43A /* Extension+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,7 @@
 		AF82C6B62C2268A300D6A43A /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
 		AF82C6B82C226B4F00D6A43A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF82C6BA2C2277E800D6A43A /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
-		AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		AF82C6C02C23B0B900D6A43A /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 		AF82C6642C1F207800D6A43A /* DalAhDalAh */ = {
 			isa = PBXGroup;
 			children = (
+				AF82C6BF2C23B0AE00D6A43A /* Extension */,
 				AF82C6B32C22614300D6A43A /* Helper */,
 				AF82C6AA2C2177E700D6A43A /* DalAhDalAh.entitlements */,
 				AF82C69E2C206C1D00D6A43A /* eclipses.json */,
@@ -203,7 +205,6 @@
 				AF82C6992C204E5100D6A43A /* EclipseDataManager.swift */,
 				AF82C6AB2C21792900D6A43A /* WeatherManager.swift */,
 				AF82C6AD2C21796500D6A43A /* LocationManager.swift */,
-				AF82C6BC2C22792900D6A43A /* LocalNotificationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -214,6 +215,14 @@
 				AF82C6952C20086500D6A43A /* EclipseHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		AF82C6BF2C23B0AE00D6A43A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AF82C6C02C23B0B900D6A43A /* Extension+Date.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF82C6BD2C22792900D6A43A /* LocalNotificationManager.swift in Sources */,
 				AF82C6972C2008FC00D6A43A /* EclipseLiveActivity.swift in Sources */,
 				AF82C6BB2C2277E800D6A43A /* LocalNotification.swift in Sources */,
 				AF82C6AC2C21792900D6A43A /* WeatherManager.swift in Sources */,
@@ -329,6 +337,7 @@
 				AF82C6AE2C21796500D6A43A /* LocationManager.swift in Sources */,
 				AF82C69A2C204E5100D6A43A /* EclipseDataManager.swift in Sources */,
 				AF82C69D2C204E9900D6A43A /* EclipseView.swift in Sources */,
+				AF82C6C12C23B0B900D6A43A /* Extension+Date.swift in Sources */,
 				AF82C6922C20081D00D6A43A /* Eclipse.swift in Sources */,
 				AF82C6962C20086500D6A43A /* EclipseHelper.swift in Sources */,
 				AF82C6662C1F207800D6A43A /* DalAhDalAhApp.swift in Sources */,
@@ -342,6 +351,7 @@
 			files = (
 				AF82C6812C2007E400D6A43A /* EclipseLiveActivity.swift in Sources */,
 				AF82C6A12C2074B100D6A43A /* Eclipse.swift in Sources */,
+				AF06B2E52C23B56F003B8E60 /* Extension+Date.swift in Sources */,
 				AF82C69B2C204E7B00D6A43A /* EclipseDataManager.swift in Sources */,
 				AF82C6852C2007E400D6A43A /* AppIntent.swift in Sources */,
 				AF82C67F2C2007E400D6A43A /* DalAhDalAhWidgetBundle.swift in Sources */,
@@ -495,6 +505,7 @@
 				INFOPLIST_KEY_NSLocationUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -533,6 +544,7 @@
 				INFOPLIST_KEY_NSLocationUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여우님의 상태를 알려면 위치정보가 필요해요. ";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

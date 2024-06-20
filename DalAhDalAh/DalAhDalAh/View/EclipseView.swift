@@ -18,13 +18,18 @@ struct EclipseView: View {
                 .font(.largeTitle)
             
             Button("Start Eclipse Activity"){
-                vm.start()
+                Task{
+                    vm.start()
+                    vm.startTimer()
+                }
+                
             }
             Button("Update Activity"){
                 vm.updateLiveActivity()
             }
             Button("End Activity"){
                 vm.endActivity()
+                vm.stopTimer()
             }
         }
         .padding()

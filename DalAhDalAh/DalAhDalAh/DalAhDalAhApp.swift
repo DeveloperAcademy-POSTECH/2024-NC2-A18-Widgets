@@ -11,7 +11,6 @@ import SwiftUI
 struct DalAhDalAhApp: App {
     @State private var eclipseHelper = EclipseHelper()
     @State private var locationManager = LocationManager()
-    //@StateObject private var lNManager = LocalNotificationManager()
     
     var body: some Scene {
         WindowGroup {    
@@ -22,6 +21,5 @@ struct DalAhDalAhApp: App {
         }
         .environment(eclipseHelper)
         .environment(locationManager)
-      //  .environmentObject(lNManager)
     }
 }
