@@ -99,8 +99,10 @@ struct SmallEclipseWidgetView: View {
                             Text("\(daysUntilEclipse)일")
                                 .font(.title3)
                                 .fontWeight(.semibold)
+                                
                         }
                         .padding(.top,12)
+                        .foregroundStyle(.white)
                     }
                     
                 }
