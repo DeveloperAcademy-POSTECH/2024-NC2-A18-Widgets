@@ -17,7 +17,7 @@ struct Provider: AppIntentTimelineProvider {
 
     // 이 메서드는 위젯 갤러리에서 또는 빠른 미리보기가 필요할 때 호출됩니다. 현재 상태의 스냅샷을 제공
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        return SimpleEntry(date: Date(), daysUntilEclipse: calculateDaysUntilNextEclipse(), moonPhase: getCurrentMoonPhase(), configuration: ConfigurationAppIntent())
+        return SimpleEntry(date: Date(), daysUntilEclipse: calculateDaysUntilNextEclipse(date: Date()), moonPhase: getCurrentMoonPhase(), configuration: ConfigurationAppIntent())
         
     }
     
