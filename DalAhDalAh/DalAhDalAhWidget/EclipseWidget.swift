@@ -32,7 +32,7 @@ struct Provider: AppIntentTimelineProvider {
         let nextUpdateDate = calendar.date(byAdding: .day, value: 1, to: startOfDay)!
 
         // 엔트리 생성
-        let entry = SimpleEntry(date: nextUpdateDate, daysUntilEclipse: calculateDaysUntilNextEclipse(), moonPhase: getCurrentMoonPhase(), configuration: ConfigurationAppIntent())
+        let entry = SimpleEntry(date: nextUpdateDate, daysUntilEclipse: calculateDaysUntilNextEclipse(date: nextUpdateDate), moonPhase: getCurrentMoonPhase(), configuration: ConfigurationAppIntent())
         entries.append(entry)
         
         // 타임라인 생성
@@ -41,13 +41,12 @@ struct Provider: AppIntentTimelineProvider {
     }
 
     
-    private func calculateDaysUntilNextEclipse() -> Int? {
-        let now = Date()
-        guard let nextEclipse = EclipseDataManager.shared.getNextEclipse(from: now) else {
+    private func calculateDaysUntilNextEclipse(date: Date) -> Int? {
+        guard let nextEclipse = EclipseDataManager.shared.getNextEclipse(from: date) else {
             return nil
         }
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: now, to: nextEclipse.startDateTime!)
+        let components = calendar.dateComponents([.day], from: date, to: nextEclipse.startDateTime!)
         return components.day
     }
     
@@ -83,7 +82,7 @@ struct SmallEclipseWidgetView: View {
                                 .frame(width: 131, height: 41)
                                 .offset(y: -18)
                             
-                            Image("달")
+                            Image("moom")
                                 .resizable()
                                 .frame(width: 56, height: 56)
                             
