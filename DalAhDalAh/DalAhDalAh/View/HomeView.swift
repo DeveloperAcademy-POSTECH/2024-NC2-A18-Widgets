@@ -14,6 +14,7 @@ struct HomeView : View {
     @State private var selectedCity: City?
     @State private var isLoading = false
     @State private var moonPhase: MoonPhase?
+    @State private var moonDate: Date?
     
     var body : some View {
         
@@ -30,6 +31,8 @@ struct HomeView : View {
                         .font(.title)
                   
                     moonPhaseView(moonPhase: moonPhase)
+                    
+                    Text(moonDate?.toString(format: "yyyy년 M월 d일") ?? "날짜 모름")
                 }
             }
             
@@ -86,7 +89,8 @@ struct HomeView : View {
         isLoading = true
         Task.detached { @MainActor in
             let dayWeather = await WeatherManager.shared.currentWeather(for: city.clLocation)
-            moonPhase = dayWeather?.dailyForecast.forecast.first?.moon.phase
+            moonPhase = dayWeather?.dailyForecast.first?.moon.phase
+            moonDate = dayWeather?.dailyForecast.first?.date
         }
         isLoading = false
     }
